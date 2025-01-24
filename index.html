@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects by Anagh</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Welcome Section -->
+  <div id="welcome" class="welcome-section">
+    <div class="welcome-content">
+      <h1>Welcome to My Developer Hub</h1>
+      <p>Hi, I'm Anagh! This is where I showcase my projects, tools, and experiments in web development. Explore my creations and stay tuned for updates!</p>
+      <button onclick="showSection('featured')">View Featured Project</button>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+<header>
+    <nav>
+      <ul class="navbar">
+        
+        <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+        <li><a href="#" onclick="showSection('about')">About Me</a></li>
+        <li><a href="#" onclick="showSection('tools')">Tools</a></li>
+        
+<li><a href="#" onclick="showSection('updates')">Updates</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- Featured Project Section -->
+  <div id="featured" class="section hidden">
+    <h2>Featured Project</h2>
+    <div class="section-content">
+      <div class="featured-card">
+        <h3>Sticky Notes by Anagh</h3>
+        <p>An offline-capable note management app with an elegant and user-friendly design, perfect for quick notes on the go.</p>
+<button onclick="window.location.href='https://my-sticky-notes-anagh.netlify.app'">Visit</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Projects Section -->
+  <div id="projects" class="section hidden">
+    <h2>My Projects</h2>
+    <div class="section-content">
+      <div class="project-card">
+        <h3>Sticky Notes by Anagh</h3>
+        <p>A browser-based sticky notes app with offline capabilities and a clean UI.</p>
+<button class="loading-button" onclick="window.location.href='https://my-sticky-notes-anagh.netlify.app'">Visit Website</button>
+</div>
+      
+      <div class="project-card">
+        <h3>Edu Platform</h3>
+        <p>A platform designed for students with study tools, notes, and to-do lists.</p>
+        <button class="loading-button" onclick="window.location.href='https://education-tools-platform.netlify.app/'">Visit Website</button>
+      </div>
+      <div class="project-card">
+        <h3>School Tools Platform (Old Version)</h3>
+        <p>The first version of Edu Platform, offering basic tools for students.</p>
+<button class="loading-button" onclick="window.location.href='https://listvista.netlify.app/'">Visit Website</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div id="about" class="section hidden">
+    <h2>About Me</h2>
+    <div class="section-content">
+      <p>Hi, I'm Anagh, a student and web developer passionate about creating tools to make life easier. This website is a collection of my projects and experiments. Stay tuned for more!</p>
+    </div>
+  </div>
+
+  <!-- Tools Section -->
+  <div id="tools" class="section hidden">
+    <h2>Tools</h2>
+    <div class="section-content">
+      <p>Explore productivity tools like calculators, timers, and more. New tools are on their way!</p>
+    </div>
+  </div>
+
+  <!-- Updates Section -->
+  <div id="updates" class="section hidden">
+    <h2>Updates</h2>
+    <div class="section-content">
+      <div class="update">
+        <div class="date">January 21, 2025</div>
+        <p><strong>Sticky Notes Website Update:</strong></p>
+        <p>New animations added and some bugs fixed with a new add list and add note UI</p>
+      </div>
+      <!-- You can add more updates here -->
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Projects by Anagh. All rights reserved.</p>
+  </footer>
+
+  <script src="game.js"></script>
+<!-- Loading Spinner -->
+<div id="loading" class="loading" style="display: none;">
+  <div class="spinner"></div>
+  <p>Loading...</p>
+</div>
+</body>
+</html>
