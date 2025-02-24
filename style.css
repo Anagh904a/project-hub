@@ -1,204 +1,51 @@
-/* General Styles */
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #333;
-  background-color: #f7f9fc;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
 
-/* Welcome Section */
-#welcome {
-  background: linear-gradient(135deg, #4CAF50, #81C784);
-  color: white;
-  text-align: center;
-  padding: 4rem 1rem;
-  clip-path: ellipse(150% 100% at 50% 0%);
-  animation: fadeIn 1s ease-out;
-}
 
-#welcome h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  animation: slideIn 1s ease-out;
-}
+# Welcome to Anagh's Developer Hub! 👋
 
-#welcome p {
-  max-width: 600px;
-  margin: 0 auto 2rem auto;
-  font-size: 1.2rem;
-}
-
-#welcome button {
-  background: white;
-  color: #4CAF50;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  margin: 0.5rem;
-}
-
-#welcome button:hover {
-  background: #f1f1f1;
-}
-
-/* Navbar */
+Hi there! I'm **Anagh**, a passionate web developer dedicated to creating tools that make life easier and more enjoyable. This repository showcases my projects, experiments, and tools in web development. Feel free to explore, contribute, and reach out if you have any questions!
 
 
 
+## 📖 Getting Started
 
-/* Section Titles */
+To get a local copy up and running, follow these simple steps:
 
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/your-repo-name.git
+   ```
 
-/* Hidden Sections */
-.hidden {
-  display: none;
-}
+2. **Navigate to the project directory**
+   ```bash
+   cd your-repo-name
+   ```
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+3. **Open the project in your favorite code editor** and start exploring!
 
-@keyframes slideIn {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+## 🤝 Contributing
 
-/* Footer */
-footer {
-  font-family: Arial, sans-serif;
- margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. If you want to contribute, please fork the repo and create a pull request. 
 
+1. **Fork the Project**
+2. **Create your Feature Branch**
+   ```bash
+   git checkout -b feature/AmazingFeature
+   ```
+3. **Commit your Changes**
+   ```bash
+   git commit -m 'Add some AmazingFeature'
+   ```
+4. **Push to the Branch**
+   ```bash
+   git push origin feature/AmazingFeature
+   ```
+5. **Open a Pull Request**
 
-.navbar {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-}
+## 📫 Contact Me
 
-.navbar li {
-  margin: 0 15px;
-}
+If you have any questions, feel free to reach out:
 
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  padding: 5px 10px;
-  transition: background 0.3s;
-  color: green;
-}
-
-.navbar a:hover {
-  background: #555;
-}
-
-.section {
-  
-  padding: 20px;
-  margin: 20px;
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-* {
-  -webkit-tap-highlight-color: transparent;
-  outline: none;
-}
-
-.featured-card{
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 15px;
-  margin: 10px 0;
-  transition: transform 0.3s;
-}
-
-.featured-card:hover {
-  transform: scale(1.05);
-}
-
-.loading {
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-z-index: 1000; /* Ensure it appears above other content */
-}
-
-.spinner {
-border: 8px solid #f3f3f3; /* Light grey */
-border-top: 8px solid #3498db; /* Blue */
-border-radius: 50%;
-width: 50px;
-height: 50px;
-animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-0% { transform: rotate(0deg); }
-100% { transform: rotate(360deg); }
-}
+- **Email**: anaghmanglick@gmail.com
 
 
-.project-card {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 15px;
-  margin: 10px 0;
-  transition: transform 0.3s;
-}
-
-.project-card:hover {
-  transform: scale(1.05);
-}
-
-button {
-  background: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  outline: none; /* Remove blue outline */
-}
-
-button:hover {
-  background: #0056b3;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #333;
-  color: #fff;
-
-  
-}
 
