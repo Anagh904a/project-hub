@@ -1,122 +1,819 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Your Site</title>
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects by Anagh</title>
+  <style>
 
-/* General Styles for Update Site Page */
+/* General Styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f7f9fc;
-    color: #333;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f7f9fc;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #4CAF50; /* Green color for the heading */
+/* Welcome Section */
+#welcome {
+  background: linear-gradient(135deg, #4CAF50, #81C784);
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+  clip-path: ellipse(150% 100% at 50% 0%);
+  animation: fadeIn 1s ease-out;
 }
 
-ul {
-    list-style-type: none; /* Remove default list styling */
-    padding: 0;
+#welcome h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  animation: slideIn 1s ease-out;
 }
 
-li {
-    background: #fff; /* White background for list items */
-    margin: 10px 0; /* Space between items */
-    padding: 15px; /* Padding inside items */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    display: flex; /* Flexbox for alignment */
-    justify-content: space-between; /* Space between text and link */
-    align-items: center; /* Center items vertically */
+#welcome p {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  font-size: 1.2rem;
 }
 
-strong {
-    color: #333; /* Darker color for program names */
+#welcome button {
+  background: white;
+  color: #4CAF50;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin: 0.5rem;
 }
 
-a {
-    text-decoration: none; /* Remove underline from links */
-    color: #007bff; /* Bootstrap primary color */
-    transition: color 0.3s; /* Smooth color transition */
+#welcome button:hover {
+  background: #f1f1f1;
 }
 
-a:hover {
-    color: #0056b3; /* Darker blue on hover */
+/* Navbar */
+
+
+
+
+/* Section Titles */
+
+
+/* Hidden Sections */
+.hidden {
+  display: none;
 }
 
-/* Responsive Styles */
-@media (max-width: 600px) {
-    body {
-        padding: 10px; /* Less padding on smaller screens */
-    }
-
-    h1 {
-        font-size: 1.5rem; /* Smaller heading on mobile */
-    }
-
-    li {
-        flex-direction: column; /* Stack items vertically on mobile */
-        align-items: flex-start; /* Align items to the start */
-    }
-
-    a {
-        margin-top: 5px; /* Space above links on mobile */
-    }
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-    </style>
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Footer */
+footer {
+  font-family: Arial, sans-serif;
+ margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: background 0.3s;
+  color: green;
+}
+
+.navbar a:hover {
+  background: #555;
+}
+
+.section {
+  
+  padding: 20px;
+  margin: 20px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+.featured-card{
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px 0;
+  transition: transform 0.3s;
+}
+
+.featured-card:hover {
+  transform: scale(1.05);
+}
+
+.loading {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+z-index: 1000; /* Ensure it appears above other content */
+}
+
+.spinner {
+border: 8px solid #f3f3f3; /* Light grey */
+border-top: 8px solid #3498db; /* Blue */
+border-radius: 50%;
+width: 50px;
+height: 50px;
+animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+
+.project-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px 0;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none; /* Remove blue outline */
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: #fff;
+
+  
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #eee;
+}
+
+.progress-bar-fill {
+  width: 0;
+  height: 100%;
+  background-color: #4CAF50;
+  transition: width 0.3s;
+}
+
+.form-step {
+  display: none;
+  transition: transform 0.3s ease;
+}
+
+.form-step.active {
+  display: block;
+}
+
+.form-step.hidden {
+  display: none;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+:root {
+  --primary-color: rgb(11, 78, 179);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* Global Stylings */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Progressbar */
+.progressbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: 2rem 0 4rem;
+}
+
+.progressbar::before,
+.progress {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  background-color: #dcdcdc;
+  z-index: -1;
+}
+
+.progress {
+  background-color: var(--primary-color);
+  width: 0%;
+  transition: 0.3s;
+}
+
+.progress-step {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background-color: #dcdcdc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-step::before {
+  counter-increment: step;
+  content: counter(step);
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.progress-step-active {
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+}
+
+/* Form */
+.form {
+  width: clamp(320px, 30%, 430px);
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 0.35rem;
+  padding: 1.5rem;
+}
+
+.form-step {
+  display: none;
+  transform-origin: top;
+  animation: animate 0.5s;
+}
+
+.form-step-active {
+  display: block;
+}
+
+.input-group {
+  margin: 2rem 0;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+/* Button */
+.btns-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.btn {
+  padding: 0.75rem;
+  display: block;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+  text-align: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+}
+
+
+
+
+
+  </style>
 </head>
 <body>
-    <h1>Available Programs - Alpha Release</h1>
-    <ul>
-        <li>
-            <strong>Sticky Notes:</strong> <a href="https://my-sticky-notes-anagh.netlify.app" target="_blank">Visit</a> (Available)
-        </li>
-        <li>
-            <strong>School Tools Platform:</strong> Ended (Public available)
-        </li>
-        <li>
-            <strong>Edu Platform:</strong> Ended (Beta available)
-        </li>
+  <!-- Welcome Section -->
+  <div id="welcome" class="welcome-section">
+    <div class="welcome-content">
+      <h1>Welcome to My Developer Hub</h1>
+      <p>Hi, I'm Anagh! This is where I showcase my projects, tools, and experiments in web development. Explore my creations and stay tuned for updates!</p>
+      <button onclick="showSection('featured')">View Featured Project</button>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+<header>
+    <nav>
+      <ul class="navbar">
         
-    </ul>
-    <h1>Available Programs - Beta Release</h1>
-    <ul>
-        <li>
-            <strong>Sticky Notes:</strong> Not started (Alpha Available)
-        </li>
-        <li>
-            <strong>School Tools Platform:</strong> Ended (Public available)
-        </li>
-        <li>
-            <strong>Edu Platform:</strong> <a href="https://school-tools-platform.netlify.app" 
-        </li>
+        <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+        <li><a href="#" onclick="showSection('about')">About Me</a></li>
+        <li><a href="#" onclick="showSection('joiner')">Management</a></li>
         
-    </ul>
-    <h1>Available Programs - Public Release</h1>
-    <ul>
-        <li>
-            <strong>Sticky Notes:</strong> Not started (Alpha available)
-        <li>
-            <strong>School Tools Platform:</strong> <a href="https://list-vista.netlify.app" target="_blank">Visit</a> (Public)
-        </li>
-        <li>
-            <strong>Edu Platform:</strong> Not started (Beta available)
-        </li>
+<li><a href="#" onclick="showSection('updates')">Updates</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- Featured Project Section -->
+  <div id="featured" class="section hidden">
+    <h2>Featured Project</h2>
+    <div class="section-content">
+      <div class="featured-card">
+        <h3>Sticky Notes by Anagh</h3>
+        <p>An offline-capable note management app with an elegant and user-friendly design, perfect for quick notes on the go.</p>
+<button onclick="window.location.href='https://my-sticky-notes-anagh.netlify.app'">Visit</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Projects Section -->
+  <div id="projects" class="section hidden">
+    <h2>My Projects</h2>
+    <div class="section-content">
+      <div class="project-card">
+        <h3>Sticky Notes by Anagh</h3>
+        <p>A browser-based sticky notes app with offline capabilities and a clean UI.</p>
+<button class="loading-button" onclick="window.location.href='https://my-sticky-notes-anagh.netlify.app'">Visit Website</button>
+</div>
+      
+      <div class="project-card">
+        <h3>Edu Platform</h3>
+        <p>A platform designed for students with study tools, notes, and to-do lists.</p>
+        <button class="loading-button" onclick="window.location.href='https://education-tools-platform.netlify.app/'">Visit Website</button>
+      </div>
+      <div class="project-card">
+        <h3>School Tools Platform (Old Version)</h3>
+        <p>The first version of Edu Platform, offering basic tools for students.</p>
+<button class="loading-button" onclick="window.location.href='https://listvista.netlify.app/'">Visit Website</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div id="about" class="section hidden">
+    <h2>About Me</h2>
+    <div class="section-content">
+      <p>Hi, I'm Anagh, a student and web developer passionate about creating tools to make life easier. This website is a collection of my projects and experiments. Stay tuned for more!</p>
+    </div>
+  </div>
+
+  <!-- Tools Section -->
+  <div id="tools" class="section hidden">
+    <h2>Tools</h2>
+    <div class="section-content">
+      <p>Explore productivity tools like calculators, timers, and more. New tools are on their way!</p>
+    </div>
+  </div>
+
+  <!-- Updates Section -->
+  <div id="updates" class="section hidden">
+    <h2>Updates</h2>
+    <div class="section-content">
+      <div class="update">
+        <div class="date">January 21, 2025</div>
+        <p><strong>Sticky Notes Website Update:</strong></p>
+        <p>New animations added and some bugs fixed with a new add list and add note UI</p>
+      </div>
+      <!-- You can add more updates here -->
+    </div>
+  </div>
+
+  <!-- Notification Modal -->
+<div id="notification-modal" class="modal hidden">
+  <div class="modal-content">
+      <span class="close" onclick="closeNotification()">&times;</span>
+      <h2>Success!</h2>
+      <p>You have successfully joined the program for the project you selected.</p>
+      <p>Click below to update your site:</p>
+      <a href="update-site.html" class="btn">Update Your Site</a>
+  </div>
+</div>
+  
+<!-- Joiner System Modal Section -->
+<div id="joiner" class="section hidden">
+    <h2>Join the Beta/Alpha Program</h2>
+    <div class="joiner-content">
+      
+  
+      <form action="#" class="form">
+        <h1 class="text-center">Registration Form</h1>
+        <!-- Progress bar -->
+        <div class="progressbar">
+          <div class="progress" id="progress"></div>
+          
+          <div
+            class="progress-step progress-step-active"
+            data-title="Select"
+          ></div>
+          <div class="progress-step" data-title="Name"></div>
+          <div class="progress-step" data-title="Email"></div>
+          <div class="progress-step" data-title="Reason"></div>
+          <div class="progress-step" data-title="Info"></div>
+          <div class="progress-step" data-title="Join"></div>
+        </div>
+  
+        <div class="form-step form-step-active">
+          <div class="input-group">
+            <select id="project-name"> 
+              <option value="sticky-notes">Sticky Notes</option> 
+              <option value="edu-platform">Edu Platform</option> 
+              <option value="school-tools">School Tools Platform</option> 
+            </select>
+          </div>
+          
+          <div class="">
+            <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
+          </div>
+        </div>
+        
        
-    </ul>
-   
+        
+          <div class="form-step">
+          <div class="input-group">
+            <label for="username">Name</label>
+            <input type="text" name="username" id="username" />
+          </div>
+          <div class="btns-group">
+            <a href="#" class="btn btn-prev">Previous</a>
+            <a href="#" class="btn btn-next">Next</a>
+          </div>
+          </div>
+          
+          <div class="form-step">
+         <div class="input-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" />
+          </div>
+          <div class="btns-group">
+            <a href="#" class="btn btn-prev">Previous</a>
+            <a href="#" class="btn btn-next">Next</a>
+          </div>
+        </div>
 
-<a href="projects.html">Go back</a>
+        <div class="form-step">
+          <h3>Your Reason For Joining</h3>
+          <div class="input-group">
+            <textarea id="reason-sticky-notes" placeholder="Tell us why you're joining the program...">
+</textarea>
+          </div>
+          
+          <div class="btns-group">
+            <a href="#" class="btn btn-prev">Previous</a>
+            <a href="#" class="btn btn-next">Next</a>
+          </div>
+        </div>
+        
+        <div class="form-step">
+          <h3>Pros and Cons</h3>
+          <p><strong>Pros:</strong> Early access to new features, help improve the app.</p>
+          <p><strong>Cons:</strong> May experience bugs, some features are not stable yet.</p>
+          <div class="input-group">
+           
+            <label for="accept-terms-sticky-notes">I accept the terms and conditions</label>
+            <input type="checkbox" id="accept-terms-sticky-notes" />
+          </div>
+         
+          <div class="btns-group">
+            <a href="#" class="btn btn-prev">Previous</a>
+            <input type="submit" value="Submit" class="btn" />
+          </div>
+
+          <p>You have successfully joined the program for the project you selected.</p>
+          <p>Click below to update your site:</p>
+          <a href="update-site.html" class="btn">Update Your Site</a>
+        </div>
+      </form>
+      </div>
+      </div>
+      
+         
+  
+        
+         
+          
+  
+  
+  
+  
+          
+
+          
+  
+          
+  
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Projects by Anagh. All rights reserved.</p>
+  </footer>
+
+  <script src="game.js"></script>
+<!-- Loading Spinner -->
+<div id="loading" class="loading" style="display: none;">
+  <div class="spinner"></div>
+  <p>Loading...</p>
+</div>
+<script>
 
 
-    
+const prevBtns = document.querySelectorAll(".btn-prev");
+const nextBtns = document.querySelectorAll(".btn-next");
+const progress = document.getElementById("progress");
+const formSteps = document.querySelectorAll(".form-step");
+const progressSteps = document.querySelectorAll(".progress-step");
+
+let formStepsNum = 0;
+
+nextBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    formStepsNum++;
+    updateFormSteps();
+    updateProgressbar();
+  });
+});
+
+prevBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    formStepsNum--;
+    updateFormSteps();
+    updateProgressbar();
+  });
+});
+
+function updateFormSteps() {
+  formSteps.forEach((formStep) => {
+    formStep.classList.contains("form-step-active") &&
+      formStep.classList.remove("form-step-active");
+  });
+
+  formSteps[formStepsNum].classList.add("form-step-active");
+}
+
+function updateProgressbar() {
+  progressSteps.forEach((progressStep, idx) => {
+    if (idx < formStepsNum + 1) {
+      progressStep.classList.add("progress-step-active");
+    } else {
+      progressStep.classList.remove("progress-step-active");
+    }
+  });
+
+  const progressActive = document.querySelectorAll(".progress-step-active");
+
+  progress.style.width =
+    ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
+}
+
+
+function showAlert() {
+  alert("This project will be updated in the next update. Stay tuned!");
+}
+
+function scrollToSection(sectionId) {
+  document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+}
+
+function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.add('hidden'); // Hide all sections
+            });
+            document.getElementById(sectionId).classList.remove('hidden'); // Show the selected section
+
+            // Manage history stack
+            
+
+
+
+
+            currentSection = sectionId; // Update current section
+        }
+
+// Function to show loading spinner
+function showLoading() {
+  document.getElementById('loading').style.display = 'flex';
+}
+
+// Function to hide loading spinner
+function hideLoading() {
+  document.getElementById('loading').style.display = 'none';
+}
+
+// Add event listeners to all buttons with the class 'loading-button'
+document.querySelectorAll('.loading-button').forEach(button => {
+  button.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default action
+    showLoading();
+
+    // Simulate a loading process (e.g., a delay before navigating)
+    setTimeout(() => {
+      hideLoading();
+      // Navigate to the URL after the loading spinner is hidden
+      window.location.href = this.onclick.toString().match(/'([^']+)'/)[1];
+    }, 3000); // Adjust the duration as needed
+  });
+});
+
+// Modal Show and Hide Logic
+
+
+// Show Sticky Notes Alpha or Beta
+
+
+// Show Edu Platform Beta Program
+function showEduBetaForm() {
+  document.getElementById('edu-form-step').style.display = 'block';
+  updateProgressBar(100); // Fill progress bar
+}
+
+// Show Alpha Ended Message for Edu Platform
+function showAlphaEndedMessage() {
+  document.getElementById('alpha-ended').style.display = 'block';
+  document.getElementById('edu-form-step').style.display = 'none';
+  updateProgressBar(100); // Full progress
+}
+
+// Update progress bar based on step
+function updateProgressBar(percentage) {
+  document.getElementById('progress-bar-fill').style.width = `${percentage}%`;
+}
+
+// Close Modal
+function closeModal() {
+  document.getElementById('form-modal').style.display = 'none';
+}
+
+// Back button functionality
+function backStep() {
+  const activeStep = document.querySelector('.form-step.active');
+  const prevStep = activeStep.previousElementSibling;
+  if (prevStep) {
+    activeStep.classList.remove('active');
+    prevStep.classList.add('active');
+  }
+}
+
+// Handle form submission (Example for Alpha form)
+document.getElementById('alpha-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  alert('You have successfully joined the Sticky Notes Alpha Program!');
+  closeModal();
+});
+
+
+</script>
 </body>
 </html>
