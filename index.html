@@ -1,111 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects by Anagh</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Your Site</title>
+    <style>
+
+/* General Styles for Update Site Page */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f7f9fc;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4CAF50; /* Green color for the heading */
+}
+
+ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+}
+
+li {
+    background: #fff; /* White background for list items */
+    margin: 10px 0; /* Space between items */
+    padding: 15px; /* Padding inside items */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between text and link */
+    align-items: center; /* Center items vertically */
+}
+
+strong {
+    color: #333; /* Darker color for program names */
+}
+
+a {
+    text-decoration: none; /* Remove underline from links */
+    color: #007bff; /* Bootstrap primary color */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Less padding on smaller screens */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Smaller heading on mobile */
+    }
+
+    li {
+        flex-direction: column; /* Stack items vertically on mobile */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    a {
+        margin-top: 5px; /* Space above links on mobile */
+    }
+}
+
+    </style>
 </head>
 <body>
-  <!-- Welcome Section -->
-  <div id="welcome" class="welcome-section">
-    <div class="welcome-content">
-      <h1>Welcome to My Developer Hub</h1>
-      <p>Hi, I'm Anagh! This is where I showcase my projects, tools, and experiments in web development. Explore my creations and stay tuned for updates!</p>
-      <button onclick="showSection('featured')">View Featured Project</button>
-    </div>
-  </div>
-
-  <!-- Navigation Bar -->
-<header>
-    <nav>
-      <ul class="navbar">
+    <h1>Available Programs - Alpha Release</h1>
+    <ul>
+        <li>
+            <strong>Sticky Notes:</strong> <a href="https://my-sticky-notes-anagh.netlify.app" target="_blank">Visit</a> (Available)
+        </li>
+        <li>
+            <strong>School Tools Platform:</strong> Ended (Public available)
+        </li>
+        <li>
+            <strong>Edu Platform:</strong> Ended (Beta available)
+        </li>
         
-        <li><a href="#" onclick="showSection('projects')">Projects</a></li>
-        <li><a href="#" onclick="showSection('about')">About Me</a></li>
-        <li><a href="#" onclick="showSection('tools')">Tools</a></li>
+    </ul>
+    <h1>Available Programs - Beta Release</h1>
+    <ul>
+        <li>
+            <strong>Sticky Notes:</strong> Not started (Alpha Available)
+        </li>
+        <li>
+            <strong>School Tools Platform:</strong> Ended (Public available)
+        </li>
+        <li>
+            <strong>Edu Platform:</strong> <a href="https://school-tools-platform.netlify.app" 
+        </li>
         
-<li><a href="#" onclick="showSection('updates')">Updates</a></li>
-      </ul>
-    </nav>
-  </header>
+    </ul>
+    <h1>Available Programs - Public Release</h1>
+    <ul>
+        <li>
+            <strong>Sticky Notes:</strong> Not started (Alpha available)
+        <li>
+            <strong>School Tools Platform:</strong> <a href="https://list-vista.netlify.app" target="_blank">Visit</a> (Public)
+        </li>
+        <li>
+            <strong>Edu Platform:</strong> Not started (Beta available)
+        </li>
+       
+    </ul>
+   
+
+<a href="projects.html">Go back</a>
 
 
-  <!-- Featured Project Section -->
-  <div id="featured" class="section hidden">
-    <h2>Featured Project</h2>
-    <div class="section-content">
-      <div class="featured-card">
-        <h3>Sticky Notes by Anagh</h3>
-        <p>An offline-capable note management app with an elegant and user-friendly design, perfect for quick notes on the go.</p>
-<button onclick="window.location.href='https://my-sticky-notes-anagh.netlify.app'">Visit</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Projects Section -->
-  <div id="projects" class="section hidden">
-    <h2>My Projects</h2>
-    <div class="section-content">
-      <div class="project-card">
-        <h3>Sticky Notes by Anagh</h3>
-        <p>A browser-based sticky notes app with offline capabilities and a clean UI.</p>
-<button class="loading-button" onclick="window.location.href='https://my-sticky-notes-anagh.netlify.app'">Visit Website</button>
-</div>
-      
-      <div class="project-card">
-        <h3>Edu Platform</h3>
-        <p>A platform designed for students with study tools, notes, and to-do lists.</p>
-        <button class="loading-button" onclick="window.location.href='https://education-tools-platform.netlify.app/'">Visit Website</button>
-      </div>
-      <div class="project-card">
-        <h3>School Tools Platform (Old Version)</h3>
-        <p>The first version of Edu Platform, offering basic tools for students.</p>
-<button class="loading-button" onclick="window.location.href='https://listvista.netlify.app/'">Visit Website</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- About Section -->
-  <div id="about" class="section hidden">
-    <h2>About Me</h2>
-    <div class="section-content">
-      <p>Hi, I'm Anagh, a student and web developer passionate about creating tools to make life easier. This website is a collection of my projects and experiments. Stay tuned for more!</p>
-    </div>
-  </div>
-
-  <!-- Tools Section -->
-  <div id="tools" class="section hidden">
-    <h2>Tools</h2>
-    <div class="section-content">
-      <p>Explore productivity tools like calculators, timers, and more. New tools are on their way!</p>
-    </div>
-  </div>
-
-  <!-- Updates Section -->
-  <div id="updates" class="section hidden">
-    <h2>Updates</h2>
-    <div class="section-content">
-      <div class="update">
-        <div class="date">January 21, 2025</div>
-        <p><strong>Sticky Notes Website Update:</strong></p>
-        <p>New animations added and some bugs fixed with a new add list and add note UI</p>
-      </div>
-      <!-- You can add more updates here -->
-    </div>
-  </div>
-
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Projects by Anagh. All rights reserved.</p>
-  </footer>
-
-  <script src="game.js"></script>
-<!-- Loading Spinner -->
-<div id="loading" class="loading" style="display: none;">
-  <div class="spinner"></div>
-  <p>Loading...</p>
-</div>
+    
 </body>
 </html>
